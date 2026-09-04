@@ -1,0 +1,52 @@
+[project]
+name = "mosaic-agent"
+version = "0.1.0"
+description = "An observable single-Agent multimodal RAG service"
+readme = "README.md"
+requires-python = ">=3.11,<3.13"
+dependencies = [
+    "fastapi>=0.115.14",
+    "fastembed>=0.7.3",
+    "langchain-text-splitters>=1.0.0",
+    "loguru>=0.7.3",
+    "openai>=1.93.0",
+    "pdfplumber>=0.11.8",
+    "pillow>=11.3.0",
+    "pydantic>=2.11.7",
+    "pymupdf>=1.26.6",
+    "python-docx>=1.2.0",
+    "python-dotenv>=1.1.1",
+    "python-multipart>=0.0.20",
+    "qdrant-client==1.15.1",
+    "requests>=2.32.4",
+    "sqlalchemy>=2.0.41",
+    "sse-starlette>=2.4.1",
+    "tqdm>=4.67.1",
+    "typing-extensions>=4.14.1",
+    "uvicorn>=0.35.0",
+]
+
+[project.optional-dependencies]
+web = [
+    "crawl4ai>=0.7.7",
+]
+office-render = [
+    "docx2pdf>=0.1.8",
+    "imgkit>=1.2.3",
+    "markdown2>=2.5.4",
+    "pdf2image>=1.17.0",
+    "playwright>=1.54.0",
+]
+s3 = [
+    "boto3>=1.41.2",
+]
+
+[dependency-groups]
+dev = [
+    "httpx>=0.28.1",
+    "pytest>=8.4.1",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]

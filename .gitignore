@@ -1,0 +1,30 @@
+# Secrets and local environment
+.env
+.env.*
+!.env_template
+.venv/
+
+# Python and test caches
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.pytest-tmp/
+.tmp/
+.uv-cache/
+.uv-python/
+git-init-incomplete/
+
+# Frontend dependencies and builds
+node_modules/
+dist/
+
+# Runtime output
+data/
+logs/
+*.log
+
+# IDE and OS metadata
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
