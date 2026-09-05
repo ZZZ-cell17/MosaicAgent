@@ -8,7 +8,7 @@
 
 ## 1. 项目一句话定位
 
-MosaicAgent 是从 JoyAgent-JDGenie 的 MRAG 模块中抽取并独立工程化的、由多模态 RAG 驱动的单 Agent 知识问答项目。
+MosaicAgent 是面向企业软件项目技术资料的、从 JoyAgent-JDGenie 的 MRAG 模块中抽取并独立工程化的多模态 RAG 单 Agent 知识问答项目。
 
 它解决两个核心问题：
 

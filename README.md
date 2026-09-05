@@ -1,8 +1,8 @@
 # MosaicAgent
 
-> 基于多模态 RAG 的单 Agent 文档问答系统
+> 面向企业软件项目的多模态 RAG 单 Agent 技术知识库助手
 
-MosaicAgent 是一个面向多模态知识库场景的 RAG Agent 应用。本项目基于 [JoyAgent-JDGenie](https://github.com/jd-opensource/joyagent-jdgenie) 的 MRAG 模块完成独立抽取、模块裁剪和工程化改造，将 PDF、DOCX、Markdown、TXT、PNG、JPG 等文档转换为可检索的文本、图片和页面证据，再由单 Agent 完成查询扩展、多路检索、证据判断、LLM/VLM 路由和带引用的流式回答。
+MosaicAgent 是一个面向企业软件项目技术资料的多模态 RAG Agent 应用。本项目基于 [JoyAgent-JDGenie](https://github.com/jd-opensource/joyagent-jdgenie) 的 MRAG 模块完成独立抽取、模块裁剪和工程化改造，将 PDF、DOCX、Markdown、TXT、PNG、JPG 等资料转换为可检索的文本、图片和页面证据，再由单 Agent 完成查询扩展、多路检索、证据判断、LLM/VLM 路由和带引用的流式回答。
 
 项目包含一个 FastAPI 后端和一个轻量 React 工作台，形成从文档入库、跨模态检索、Agent 决策到可追溯答案生成的完整应用闭环。
 
@@ -19,6 +19,17 @@ MosaicAgent 是一个面向多模态知识库场景的 RAG Agent 应用。本项
 - 实时观察查询规划、多路检索、证据判断、重排和 LLM/VLM 路由。
 
 访问地址：`http://127.0.0.1:5173`
+
+## 典型使用场景
+
+MosaicAgent 面向企业软件项目中的技术知识查询，适合将分散在文档、架构图和系统截图中的信息统一纳入一个可追溯的问答入口：
+
+- 研发人员查询系统架构、模块职责、接口说明和技术方案。
+- 测试人员查询业务流程、异常处理、测试说明和接口约束。
+- 运维人员查询部署手册、配置说明、故障排查步骤和监控截图。
+- 新成员通过项目文档、架构图和页面截图快速理解系统结构与技术链路。
+
+当前仓库中的 `examples/knowledge/mosaic_overview.md` 和 `docs/img/mrag/mrag_struct.png` 主要用于验证文档入库、跨模态检索和 Agent 问答的端到端链路，属于最小技术示例，并不代表完整的企业业务知识库。替换 `examples/` 下的资料即可接入具体项目文档。
 
 ## 核心能力
 
